@@ -11,13 +11,13 @@ variables:
   azureServiceConnectionId: '54cc5d72-b3d9-4a87-972d-a658befb77b7'
   
   # Web app name
-  webAppName: 'wilyas3-test1'
+  webAppName: 'wilyas3-test2'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'wilyas3-test1'
+  environmentName: 'wilyas3-test2'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -80,7 +80,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : wilyas3-test1'
+            displayName: 'Deploy Azure Web App : wilyas3-test2'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
